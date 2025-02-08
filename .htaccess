@@ -1,0 +1,39 @@
+RewriteEngine on
+
+Options -Indexes
+
+RewriteCond %{HTTP_HOST} ^caddschool.com
+RewriteRule (.*) http://www.caddschool.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^mechanical-cad/autocad-training-centre-in-chennai.php$ mechanical-autocad-training-centre-in-chennai.php [L]
+
+RewriteRule ^electrical-cad/autocad-training-centre-in-chennai.php$ electrical-autocad-training-centre-in-chennai.php [L]
+
+RewriteRule ^civil-cad/autocad-training-centre-in-chennai.php$ civil-autocad-training-centre-in-chennai.php [L]
+
+RewriteRule ^electronics-cad/autocad-training-centre-in-chennai.php$ electronics-autocad-training-centre-in-chennai.php [L]
+
+RewriteRule ^student-project/([a-zA-Z0-9_-]+)$ student-project.php?query=$1 [L]
+
+RewriteRule ^blogs/([a-zA-Z0-9_-]+)/$ blogs/project_detail.php?pname=$1 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ chennai/$1/$2 [L]
+
+RewriteRule ^blogs/page/([0-9]+)$ blogs/index.php?page=$1
+
+RewriteRule ^blogs/category/([a-zA-Z0-9_-]+)$ blogs/index.php?cat=$1
+
+RewriteRule ^blogs/category/([a-zA-Z0-9_-]+)/([0-9]+)$ blogs/index.php?cat=$1&page=$2 [L]
+
+#RewriteRule ^partner-login/forget-password$ partner-login/index.php?forget-password= [L]
+
+#RewriteRule ^partner-login/registerarion$ partner-login/index.php?new-login= [L]
+
+errorDocument 400 http://www.caddschool.com/
+errorDocument 401 http://www.caddschool.com/
+errorDocument 403 http://www.caddschool.com/
+errorDocument 404 http://www.caddschool.com/error.php
+errorDocument 500 http://www.caddschool.com/
