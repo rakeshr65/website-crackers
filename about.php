@@ -34,7 +34,7 @@ include "head.php";
 .about-image a {
   display: block;
   position: relative;
-  margin-left:20px;
+  margin-left:50px;
   margin-top: 30px;
   margin-bottom: 20px;
  }
@@ -366,4 +366,5 @@ include "head.php";
 
 <?php
 include "footer.php";
+
 ?>
